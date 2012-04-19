@@ -37,78 +37,19 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef OCTOMAP_CONVERT_MSGS_H
-#define OCTOMAP_CONVERT_MSGS_H
+#ifndef OCTOMAP_ROS_CONVERT_MSGS_H
+#define OCTOMAP_ROS_CONVERT_MSGS_H
 
 #include <octomap/octomap.h>
-#include <octomap_ros/OctomapBinary.h>
+#include <octomap_msgs/OctomapBinary.h>
+#include <octomap_msgs/conversions.h>
+
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 #include <geometry_msgs/Point.h>
 #include <tf/transform_datatypes.h>
 
 namespace octomap {
-  /**
-   * @brief Converts an octomap map structure to a ROS octomap msg as binary data.
-   * This will fill the timestamp of the header with the current time, but will
-   * not fill in the frame_id.
-   *
-   * @param octomap input OcTree
-   * @param mapMsg output msg
-   */
-  template <class OctomapT>
-  static inline void octomapMapToMsg(const OctomapT& octomap, octomap_ros::OctomapBinary& mapMsg){
-    mapMsg.header.stamp = ros::Time::now();
-
-    octomapMapToMsgData(octomap, mapMsg.data);
-  }
-
-   /**
-    * @brief Converts an octomap map structure to a ROS binary data, which can be
-    * put into a dedicated octomap msg.
-    *
-    * @param octomap input OcTree
-    * @param mapData binary output data as int8[]
-    */
-  template <class OctomapT>
-  static inline void octomapMapToMsgData(const OctomapT& octomap, std::vector<int8_t>& mapData){
-	  // conversion via stringstream
-
-	  // TODO: read directly into buffer? see
-	  // http://stackoverflow.com/questions/132358/how-to-read-file-content-into-istringstream
-	  std::stringstream datastream;
-	  octomap.writeBinaryConst(datastream);
-	  std::string datastring = datastream.str();
-	  mapData = std::vector<int8_t>(datastring.begin(), datastring.end());
-  }
-
-
-  /**
-   * @brief Converts a ROS octomap msg (binary data) to an octomap map structure
-   *
-   * @param mapMsg
-   * @param octomap
-   */
-  template <class OctomapT>
-  static inline void octomapMsgToMap(const octomap_ros::OctomapBinary& mapMsg, OctomapT& octomap){
-	octomapMsgDataToMap(mapMsg.data, octomap);
-  }
-
-  /**
-   * @brief Converts ROS binary data to an octomap map structure, e.g. coming from an
-   * octomap msg
-   *
-   * @param mapData input binary data
-   * @param octomap output OcTree
-   */
-  template <class OctomapT>
-  static inline void octomapMsgDataToMap(const std::vector<int8_t>& mapData, OctomapT& octomap){
-    std::stringstream datastream;
-    assert(mapData.size() > 0);
-    datastream.write((const char*) &mapData[0], mapData.size());
-    octomap.readBinary(datastream);
-  }
-
   /**
    * @brief Conversion from octomap::point3d_list (e.g. all occupied nodes from getOccupied()) to
    * pcl PointCloud

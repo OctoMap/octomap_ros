@@ -15,8 +15,7 @@
   </export>
   
   <depend package="roscpp"/>
-  <depend package="geometry_msgs"/>
-  <depend package="sensor_msgs"/>
+  <depend package="octomap_msgs"/>
   <depend package="pcl"/>
   <depend package="tf"/>
   
