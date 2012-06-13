@@ -20,6 +20,7 @@
   <depend package="tf"/>
   
   <rosdep name="octomap" />
+  <rosdep name="octomap_msgs" />
 
 </package>
 
