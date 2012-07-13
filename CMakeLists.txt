@@ -31,6 +31,6 @@ rosbuild_gensrv()
 
 
 rosbuild_add_library(${PROJECT_NAME} src/conversions.cpp)
-rosbuild_add_executable(test_octomap_ros src/test_octomap_ros.cpp)
+#rosbuild_add_executable(test_octomap_ros src/test_octomap_ros.cpp)
 
 

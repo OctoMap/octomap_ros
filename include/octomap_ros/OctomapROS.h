@@ -52,22 +52,22 @@
 #include <octomap/octomap.h>
 #include <octomap_ros/conversions.h>
 
+#pragma message("DEPRECATION WARNING: OctomapROS.h is deprecated and will disappear soon. Use the OctoMap library and octomap_ros/conversions.h directly instead.")
+
 namespace octomap {
 
 
   /**
-   * @brief ROS wrapper class for OctoMap Octrees, providing the most important
-   * functionality with ROS / PCL types.
-   * The class is templated over the Octree type. Any OcTree derived from
-   * octomap::OccupancyOcTreeBase should work. For most cases, OcTreeROS
-   * should work best for occupancy maps.
+   * @brief DEPRECATED wrapper class for OctoMap Octrees. Is is recommended to use the OctoMap
+   * libary and octomap_ros/conversions.h directly instead!
    *
+   * @deprecated
    */
   template <class OctreeT>
   class OctomapROS {
   public:
-    OctomapROS(double resolution);
-    OctomapROS(OctreeT tree);
+    OctomapROS(double resolution) __attribute__ ((deprecated));
+    OctomapROS(OctreeT tree) __attribute__ ((deprecated));
     virtual ~OctomapROS() {}
 
     /**

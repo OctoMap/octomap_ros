@@ -37,8 +37,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef OCTOMAP_ROS_CONVERT_MSGS_H
-#define OCTOMAP_ROS_CONVERT_MSGS_H
+#ifndef OCTOMAP_ROS_CONVERSIONS_H
+#define OCTOMAP_ROS_CONVERSIONS_H
 
 #include <octomap/octomap.h>
 #include <octomap_msgs/OctomapBinary.h>
