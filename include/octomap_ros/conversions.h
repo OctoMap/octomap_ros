@@ -41,8 +41,6 @@
 #define OCTOMAP_ROS_CONVERSIONS_H
 
 #include <octomap/octomap.h>
-#include <octomap_msgs/OctomapBinary.h>
-#include <octomap_msgs/conversions.h>
 
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>

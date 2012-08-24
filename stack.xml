@@ -1,6 +1,6 @@
 <stack>
   <name>octomap_ros</name>
-  <version>0.1.1</version>
+  <version>0.2.0</version>
   <description brief="octomap_ros - conversions and wrappers to use octomap in ROS">
     octomap_ros provides conversion functions between ROS / PCL and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
@@ -13,9 +13,8 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/octomap_ros</url>
   
-  <depends>octomap_msgs</depends>
   <depends>octomap</depends>
-  <depends>perception_pcl</depends>
+  <depends>pcl</depends>
   <depends>geometry</depends>
   <depends>ros_comm</depends>
   

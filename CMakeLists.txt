@@ -18,8 +18,11 @@ link_libraries(${PROJECT_NAME} ${OCTOMAP_LIBRARIES})
 
 find_package(octomap_msgs REQUIRED)
 include_directories(${octomap_msgs_INCLUDE_DIRS})
-link_directories(${octomap_msgs_LIBRARY_DIRS})
 link_libraries(${PROJECT_NAME} ${octomap_msgs_LIBRARIES})
+
+find_package(PCL REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_libraries(${PROJECT_NAME} ${PCL_COMMON_LIBRARIES})
 
 #set the default path for built executables to the "bin" directory
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
