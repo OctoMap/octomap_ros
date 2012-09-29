@@ -1,39 +1,34 @@
-cmake_minimum_required(VERSION 2.4.6)
-include($ENV{ROS_ROOT}/core/rosbuild/rosbuild.cmake)
+cmake_minimum_required(VERSION 2.8)
+project(octomap_ros)
+find_package(catkin)
+catkin_stack()
 
-# Set the build type.  Options are:
-#  Coverage       : w/ debug symbols, w/o optimization, w/ code-coverage
-#  Debug          : w/ debug symbols, w/o optimization
-#  Release        : w/o debug symbols, w/ optimization
-#  RelWithDebInfo : w/ debug symbols, w/ optimization
-#  MinSizeRel     : w/o debug symbols, w/ optimization, stripped binaries
-#set(ROS_BUILD_TYPE RelWithDebInfo)
-
-rosbuild_init()
+find_package(catkin REQUIRED sensor_msgs tf pcl_ros octomap_msgs)
+include_directories(${catkin_INCLUDE_DIRS})
+link_directories(${catkin_LIBRARY_DIRS})
+link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
 find_package(octomap REQUIRED)
-include_directories(${OCTOMAP_INCLUDE_DIRS})
-link_directories(${OCTOMAP_LIBRARY_DIRS})
-link_libraries(${PROJECT_NAME} ${OCTOMAP_LIBRARIES})
-
-find_package(octomap_msgs REQUIRED)
-include_directories(${octomap_msgs_INCLUDE_DIRS})
-link_libraries(${PROJECT_NAME} ${octomap_msgs_LIBRARIES})
+include_directories(${octomap_INCLUDE_DIRS})
+link_directories(${octomap_LIBRARY_DIRS})
+link_libraries(${PROJECT_NAME} ${octomap_LIBRARIES})
 
 find_package(PCL REQUIRED)
 include_directories(${PCL_INCLUDE_DIRS})
-link_libraries(${PROJECT_NAME} ${PCL_COMMON_LIBRARIES})
+link_directories(${PCL_LIBRARY_DIRS})
+link_libraries(${PROJECT_NAME} ${PCL_LIBRARIES})
 
-#set the default path for built executables to the "bin" directory
-set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
-#set the default path for built libraries to the "lib" directory
-set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
+include_directories(include)
 
-rosbuild_genmsg()
-rosbuild_gensrv()
+catkin_project(${PROJECT_NAME}
+  INCLUDE_DIRS include 
+  LIBRARIES ${PROJECT_NAME}
+  DEPENDS sensor_msgs tf pcl_ros octomap_msgs  
+)
 
+add_library(${PROJECT_NAME} src/conversions.cpp)
 
-rosbuild_add_library(${PROJECT_NAME} src/conversions.cpp)
-#rosbuild_add_executable(test_octomap_ros src/test_octomap_ros.cpp)
-
+install(TARGETS ${PROJECT_NAME}  
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin)
 

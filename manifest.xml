@@ -11,15 +11,18 @@
   <url>http://ros.org/wiki/octomap_ros</url>
   
   <export>
-    <cpp cflags="-I${prefix}/include -DOCTOMAP_NODEBUGOUT"  lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -loctomap_ros"/>
+    <cpp cflags="-I${prefix}/include -DOCTOMAP_NODEBUGOUT `pkg-config octomap --cflags`"
+         lflags="-L${prefix}/lib -Wl,-rpath,${prefix}/lib -loctomap_ros `pkg-config octomap --libs`"/>
   </export>
   
   <depend package="roscpp"/>
+<!--  <depend package="octomap_msgs"/> -->
   <depend package="sensor_msgs"/>
+  <depend package="pcl_ros"/>
   <depend package="tf"/>
   
+  <rosdeb name="pcl" />
   <rosdep name="octomap" />
+  <rosdep name="octomap_msgs" />
 
 </package>
-
-

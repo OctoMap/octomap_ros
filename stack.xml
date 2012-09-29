@@ -8,15 +8,26 @@
   </description>
   <author email="HornungA@informatik.uni-freiburg.de">Armin Hornung</author>
   <maintainer email="HornungA@informatik.uni-freiburg.de">Armin Hornung</maintainer>
+  <maintainer email="jkammerl@willowgarage.com">Julius Kammerl</maintainer>
   <license>BSD</license>
   <copyright>Armin Hornung</copyright>
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/octomap_ros</url>
   
+  <build_depends>cmake</build_depends>
+  <build_depends>catkin</build_depends>
+  <build_depends>octomap_msgs</build_depends>
+  <build_depends>octomap</build_depends>
+  <build_depends>perception_pcl</build_depends>
+  <build_depends>geometry</build_depends>
+  <build_depends>ros_comm</build_depends>
+  <build_depends>common_msgs</build_depends>
+
+  <depends>octomap_msgs</depends>
   <depends>octomap</depends>
-  <depends>pcl</depends>
+  <depends>perception_pcl</depends>
   <depends>geometry</depends>
   <depends>ros_comm</depends>
-  
+  <depends>common_msgs</depends>
 
 </stack>
