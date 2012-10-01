@@ -1,6 +1,6 @@
 <stack>
   <name>octomap_ros</name>
-  <version>0.2.1</version>
+  <version>0.2.2</version>
   <description brief="octomap_ros - conversions and wrappers to use octomap in ROS">
     octomap_ros provides conversion functions between ROS / PCL and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
