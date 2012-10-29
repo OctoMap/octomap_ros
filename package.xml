@@ -1,4 +1,4 @@
-<stack>
+<package>
   <name>octomap_ros</name>
   <version>0.2.2</version>
   <description brief="octomap_ros - conversions and wrappers to use octomap in ROS">
@@ -14,20 +14,19 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/octomap_ros</url>
   
-  <build_depends>cmake</build_depends>
-  <build_depends>catkin</build_depends>
-  <build_depends>octomap_msgs</build_depends>
-  <build_depends>octomap</build_depends>
-  <build_depends>perception_pcl</build_depends>
-  <build_depends>geometry</build_depends>
-  <build_depends>ros_comm</build_depends>
-  <build_depends>common_msgs</build_depends>
+  <build_depend>cmake</build_depend>
+  <build_depend>catkin</build_depend>
+  <build_depend>octomap_msgs</build_depend>
+  <build_depend>octomap</build_depend>
+  <build_depend>perception_pcl</build_depend>
+  <build_depend>geometry</build_depend>
+  <build_depend>ros_comm</build_depend>
+  <build_depend>common_msgs</build_depend>
 
-  <depends>octomap_msgs</depends>
-  <depends>octomap</depends>
-  <depends>perception_pcl</depends>
-  <depends>geometry</depends>
-  <depends>ros_comm</depends>
-  <depends>common_msgs</depends>
-
-</stack>
+  <run_depend>octomap_msgs</run_depend>
+  <run_depend>octomap</run_depend>
+  <run_depend>perception_pcl</run_depend>
+  <run_depend>geometry</run_depend>
+  <run_depend>ros_comm</run_depend>
+  <run_depend>common_msgs</run_depend>
+</package>
