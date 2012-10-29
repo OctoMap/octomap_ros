@@ -6,13 +6,13 @@ if (${catkin_VERSION} VERSION_GREATER "0.5.28")
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  DEPENDS sensor_msgs tf pcl_ros)
+  DEPENDS sensor_msgs tf pcl_ros octomap_msgs)
 else()
   catkin_stack()
   catkin_project(octomap_ros)
 endif()
 
-find_package(catkin REQUIRED sensor_msgs tf pcl_ros)
+find_package(catkin REQUIRED sensor_msgs tf pcl_ros octomap_msgs)
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
