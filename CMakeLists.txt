@@ -27,14 +27,10 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} src/conversions.cpp)
 
-if (ROS_FUERTE_FOUND)
-# install the applications
-install(TARGETS ${PROJECT_NAME} 
-  LIBRARY DESTINATION share/${PROJECT_NAME}/lib)
-
-endif()
-if (ROS_GROOVY_OR_ABOVE_FOUND)
 install(TARGETS ${PROJECT_NAME} 
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
-endif()
 
+install(DIRECTORY include/octomap_ros/
+  DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION}/octomap_ros/
+  FILES_MATCHING PATTERN "*.h"
+  PATTERN ".svn" EXCLUDE)
