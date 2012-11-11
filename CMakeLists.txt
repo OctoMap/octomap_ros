@@ -5,7 +5,7 @@ find_package(catkin)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  DEPENDS sensor_msgs tf pcl_ros octomap_msgs common_msgs)
+  DEPENDS sensor_msgs tf pcl_ros octomap_msgs)
 
 find_package(catkin REQUIRED sensor_msgs tf pcl_ros octomap_msgs)
 include_directories(${catkin_INCLUDE_DIRS})
