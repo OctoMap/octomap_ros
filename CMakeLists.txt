@@ -5,7 +5,7 @@ find_package(catkin)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  DEPENDS sensor_msgs tf pcl_ros octomap_msgs)
+  DEPENDS sensor_msgs tf pcl_ros octomap_msgs common_msgs)
 
 find_package(catkin REQUIRED sensor_msgs tf pcl_ros octomap_msgs)
 include_directories(${catkin_INCLUDE_DIRS})
@@ -27,14 +27,6 @@ include_directories(include ${catkin_INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} src/conversions.cpp)
 
-if (ROS_FUERTE_FOUND)
-# install the applications
-install(TARGETS ${PROJECT_NAME} 
-  LIBRARY DESTINATION share/${PROJECT_NAME}/lib)
-
-endif()
-if (ROS_GROOVY_OR_ABOVE_FOUND)
 install(TARGETS ${PROJECT_NAME} 
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION})
-endif()
 

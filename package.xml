@@ -17,14 +17,14 @@
   <build_depend>octomap_msgs</build_depend>
   <build_depend>octomap</build_depend>
   <build_depend>pcl_ros</build_depend>
-  <build_depend>geometry</build_depend>
-  <build_depend>ros_comm</build_depend>
+  <build_depend>tf</build_depend>
+  <build_depend>sensor_msgs</build_depend>
   <build_depend>common_msgs</build_depend>
 
   <run_depend>octomap_msgs</run_depend>
   <run_depend>octomap</run_depend>
-  <run_depend>perception_pcl</run_depend>
-  <run_depend>geometry</run_depend>
-  <run_depend>ros_comm</run_depend>
+  <run_depend>pcl_ros</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
   <run_depend>common_msgs</run_depend>
 </package>
