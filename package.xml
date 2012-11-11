@@ -1,7 +1,7 @@
 <package>
   <name>octomap_ros</name>
-  <version>0.2.3</version>
-  <description brief="octomap_ros - conversions and wrappers to use octomap in ROS">
+  <version>0.2.4</version>
+  <description>
     octomap_ros provides conversion functions between ROS / PCL and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
     
@@ -10,15 +10,13 @@
   <maintainer email="HornungA@informatik.uni-freiburg.de">Armin Hornung</maintainer>
   <maintainer email="jkammerl@willowgarage.com">Julius Kammerl</maintainer>
   <license>BSD</license>
-  <copyright>Armin Hornung</copyright>
-  <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/octomap_ros</url>
   
   <build_depend>cmake</build_depend>
   <build_depend>catkin</build_depend>
   <build_depend>octomap_msgs</build_depend>
   <build_depend>octomap</build_depend>
-  <build_depend>perception_pcl</build_depend>
+  <build_depend>pcl_ros</build_depend>
   <build_depend>geometry</build_depend>
   <build_depend>ros_comm</build_depend>
   <build_depend>common_msgs</build_depend>
