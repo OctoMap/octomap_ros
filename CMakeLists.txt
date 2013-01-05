@@ -5,17 +5,17 @@ find_package(catkin REQUIRED COMPONENTS sensor_msgs tf pcl_ros octomap_msgs)
 find_package(octomap REQUIRED)
 
 catkin_package(
-  INCLUDE_DIRS include
-  LIBRARIES ${PROJECT_NAME}
+  INCLUDE_DIRS include ${OCTOMAP_INCLUDE_DIRS}
+  LIBRARIES ${PROJECT_NAME} ${OCTOMAP_LIBRARIES}
   DEPENDS sensor_msgs tf pcl_ros octomap_msgs)
 
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
 link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
-include_directories(${octomap_INCLUDE_DIRS})
-link_directories(${octomap_LIBRARY_DIRS})
-link_libraries(${PROJECT_NAME} ${octomap_LIBRARIES})
+include_directories(${OCTOMAP_INCLUDE_DIRS})
+link_directories(${OCTOMAP_LIBRARY_DIRS})
+link_libraries(${PROJECT_NAME} ${OCTOMAP_LIBRARIES})
 
 include_directories(include)
 include_directories(include ${catkin_INCLUDE_DIRS})
