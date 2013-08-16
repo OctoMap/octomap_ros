@@ -1,6 +1,6 @@
 <package>
   <name>octomap_ros</name>
-  <version>0.2.6</version>
+  <version>0.3.0</version>
   <description>
     octomap_ros provides conversion functions between ROS / PCL and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
@@ -10,7 +10,8 @@
   <maintainer email="HornungA@informatik.uni-freiburg.de">Armin Hornung</maintainer>
   <maintainer email="jkammerl@willowgarage.com">Julius Kammerl</maintainer>
   <license>BSD</license>
-  <url>http://ros.org/wiki/octomap_ros</url>
+  <url type="website">http://ros.org/wiki/octomap_ros</url>
+  <url type="bugtracker">https://github.com/OctoMap/octomap_msgs/issues</url>
   
   <buildtool_depend>catkin</buildtool_depend>
   
