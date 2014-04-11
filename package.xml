@@ -8,10 +8,9 @@
   </description>
   <author email="HornungA@informatik.uni-freiburg.de">Armin Hornung</author>
   <maintainer email="HornungA@informatik.uni-freiburg.de">Armin Hornung</maintainer>
-  <maintainer email="jkammerl@willowgarage.com">Julius Kammerl</maintainer>
   <license>BSD</license>
   <url type="website">http://ros.org/wiki/octomap_ros</url>
-  <url type="bugtracker">https://github.com/OctoMap/octomap_msgs/issues</url>
+  <url type="bugtracker">https://github.com/OctoMap/octomap_ros/issues</url>
   
   <buildtool_depend>catkin</buildtool_depend>
   
