@@ -1,5 +1,3 @@
-// $Id$
-
 /**
  * OctoMap ROS integration
  *
