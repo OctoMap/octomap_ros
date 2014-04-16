@@ -2,8 +2,8 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.3.1 (2014-04-16)
+------------------
 * Fixing `#3 <https://github.com/OctoMap/octomap_ros/issues/3>`_ (explicit instantiation in conversions.cpp)
 
 0.3.0 (2013-05-03)
