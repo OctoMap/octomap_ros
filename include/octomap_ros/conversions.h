@@ -40,47 +40,27 @@
 
 #include <octomap/octomap.h>
 
-#include <pcl/point_cloud.h>
-#include <pcl/point_types.h>
+#include <sensor_msgs/PointCloud2.h>
 #include <geometry_msgs/Point.h>
 #include <tf/transform_datatypes.h>
 
 namespace octomap {
   /**
    * @brief Conversion from octomap::point3d_list (e.g. all occupied nodes from getOccupied()) to
-   * pcl PointCloud
+   * sensor_msgs::PointCloud2
    *
    * @param points
-   * @param scan
+   * @param cloud
    */
-  template <class PointT>
-  static inline void pointsOctomapToPCL(const point3d_list& points, pcl::PointCloud<PointT>& cloud){
-
-    cloud.points.reserve(points.size());
-    for (point3d_list::const_iterator it = points.begin(); it != points.end(); ++it){
-      cloud.push_back(PointT(it->x(), it->y(), it->z()));
-    }
-
-  }
+  void pointsOctomapToPointCloud2(const point3d_list& points, sensor_msgs::PointCloud2& cloud);
 
   /**
-   * @brief Conversion from a PCL pointcloud to octomap::Pointcloud, used internally in OctoMap
+   * @brief Conversion from a sensor_msgs::PointCLoud2 to octomap::Pointcloud, used internally in OctoMap
    *
-   * @param pclCloud
+   * @param cloud
    * @param octomapCloud
    */
-  template <class PointT>
-  static inline void pointcloudPCLToOctomap(const pcl::PointCloud<PointT>& pclCloud, Pointcloud& octomapCloud){
-    octomapCloud.reserve(pclCloud.points.size());
-
-    typename
-    pcl::PointCloud<PointT>::const_iterator it;
-    for (it = pclCloud.begin(); it != pclCloud.end(); ++it){
-      // Check if the point is invalid
-      if (!std::isnan (it->x) && !std::isnan (it->y) && !std::isnan (it->z))
-        octomapCloud.push_back(it->x, it->y, it->z);
-    }
-  }
+  void pointCloud2ToOctomap(const sensor_msgs::PointCloud2& cloud, Pointcloud& octomapCloud);
 
   /// Conversion from octomap::point3d to geometry_msgs::Point
   static inline geometry_msgs::Point pointOctomapToMsg(const point3d& octomapPt){
@@ -105,19 +85,6 @@ namespace octomap {
   /// Conversion from tf::Point to octomap::point3d
   static inline octomap::point3d pointTfToOctomap(const tf::Point& ptTf){
     return point3d(ptTf.x(), ptTf.y(), ptTf.z());
-  }
-
-  /// Conversion from pcl::PointT to octomap::point3d
-  template <class PointT>
-  static inline octomap::point3d pointPCLToOctomap(const PointT& p){
-    return point3d(p.x, p.y, p.z);
-  }
-
-  /// Conversion from octomap::point3d to pcl::PointT, templated over pcl::PointT
-  /// You might have to call this like "pointOctomapToPCL<pcl::PointXYZ>(point3d)"
-  template <class PointT>
-  static inline PointT pointOctomapToPCL(const point3d& octomapPt){
-	return PointT(octomapPt.x(), octomapPt.y(), octomapPt.z());
   }
 
   /// Conversion from octomap Quaternion to tf::Quaternion

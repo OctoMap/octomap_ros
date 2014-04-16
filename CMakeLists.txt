@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 2.8)
 project(octomap_ros)
 
-find_package(catkin REQUIRED COMPONENTS sensor_msgs tf pcl_ros octomap_msgs)
+find_package(catkin REQUIRED COMPONENTS sensor_msgs tf octomap_msgs)
 find_package(octomap REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS include ${OCTOMAP_INCLUDE_DIRS}
   LIBRARIES ${PROJECT_NAME} ${OCTOMAP_LIBRARIES}
-  DEPENDS sensor_msgs tf pcl_ros octomap_msgs)
+  DEPENDS sensor_msgs tf octomap_msgs)
 
 include_directories(${catkin_INCLUDE_DIRS})
 link_directories(${catkin_LIBRARY_DIRS})
