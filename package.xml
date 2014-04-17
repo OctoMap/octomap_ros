@@ -2,7 +2,7 @@
   <name>octomap_ros</name>
   <version>0.3.1</version>
   <description>
-    octomap_ros provides conversion functions between ROS / PCL and OctoMap's native types.
+    octomap_ros provides conversion functions between ROS and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
     
   </description>
@@ -17,13 +17,11 @@
   <build_depend>catkin</build_depend>
   <build_depend>octomap_msgs</build_depend>
   <build_depend>octomap</build_depend>
-  <build_depend>pcl_ros</build_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>tf</build_depend>
 
   <run_depend>octomap_msgs</run_depend>
   <run_depend>octomap</run_depend>
-  <run_depend>pcl_ros</run_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>tf</run_depend>
 </package>
