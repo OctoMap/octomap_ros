@@ -2,6 +2,10 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Dropped PCL support in favor of sensor_msgs::PointCloud2.
+
 0.3.1 (2014-04-16)
 ------------------
 * Fixing `#3 <https://github.com/OctoMap/octomap_ros/issues/3>`_ (explicit instantiation in conversions.cpp)
