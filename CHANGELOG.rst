@@ -2,8 +2,8 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.0 (2014-04-17)
+------------------
 * Dropped PCL support in favor of sensor_msgs::PointCloud2.
 
 0.3.1 (2014-04-16)

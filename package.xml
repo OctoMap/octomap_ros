@@ -1,6 +1,6 @@
 <package>
   <name>octomap_ros</name>
-  <version>0.3.1</version>
+  <version>0.4.0</version>
   <description>
     octomap_ros provides conversion functions between ROS and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
