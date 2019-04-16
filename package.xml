@@ -14,7 +14,6 @@
   
   <buildtool_depend>catkin</buildtool_depend>
   
-  <build_depend>catkin</build_depend>
   <build_depend>octomap_msgs</build_depend>
   <build_depend>octomap</build_depend>
   <build_depend>sensor_msgs</build_depend>
