@@ -2,6 +2,13 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Added archive destination for static libraries (`#10 <https://github.com/OctoMap/octomap_ros/issues/10>`_)
+* Fix catkin_lint issues and cmake policy CMP0038 (`#9 <https://github.com/OctoMap/octomap_ros/issues/9>`_)
+* Update maintainer emails
+* Contributors: Andrea Ponza, Armin Hornung, Sebastian Kasperski, Wolfgang Merkt
+
 0.4.0 (2014-04-17)
 ------------------
 * Dropped PCL support in favor of sensor_msgs::PointCloud2.
