@@ -7,6 +7,7 @@
     
   </description>
   <author email="armin@hornung.io">Armin Hornung</author>
+  <maintainer email="opensource@wolfgangmerkt.com">Wolfgang Merkt</maintainer>
   <maintainer email="armin@hornung.io">Armin Hornung</maintainer>
   <license>BSD</license>
   <url type="website">http://ros.org/wiki/octomap_ros</url>
