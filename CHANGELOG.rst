@@ -2,8 +2,8 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.1 (2020-04-23)
+------------------
 * Added archive destination for static libraries (`#10 <https://github.com/OctoMap/octomap_ros/issues/10>`_)
 * Fix catkin_lint issues and cmake policy CMP0038 (`#9 <https://github.com/OctoMap/octomap_ros/issues/9>`_)
 * Update maintainer emails
