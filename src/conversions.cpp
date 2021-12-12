@@ -35,6 +35,7 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 #include <sensor_msgs/point_cloud2_iterator.hpp>
+
 #include <octomap_ros/conversions.hpp>
 
 namespace octomap

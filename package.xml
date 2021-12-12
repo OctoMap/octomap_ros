@@ -16,11 +16,12 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
-  <depend>octomap_msgs</depend>
   <depend>octomap</depend>
+  <depend>octomap_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>tf2</depend>
 
+  <test_depend>ament_cmake_gtest</test_depend>
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
