@@ -26,11 +26,11 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
+#include <gtest/gtest.h>
+
 #include <sensor_msgs/point_cloud2_iterator.hpp>
 
 #include <octomap_ros/conversions.hpp>
-
-#include <gtest/gtest.h>
 
 constexpr double epsilon = 1e-6;
 
