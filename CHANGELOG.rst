@@ -2,6 +2,11 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix include order (`#15 <https://github.com/OctoMap/octomap_ros/issues/15>`_)
+* Contributors: wep21
+
 0.4.2 (2021-12-13)
 ------------------
 * ROS2 Migration (`#14 <https://github.com/OctoMap/octomap_ros/issues/14>`_)
