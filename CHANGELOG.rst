@@ -2,8 +2,8 @@
 Changelog for package octomap_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.4.3 (2022-05-12)
+------------------
 * Fix include order (`#15 <https://github.com/OctoMap/octomap_ros/issues/15>`_)
 * Contributors: wep21
 

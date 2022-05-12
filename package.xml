@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>octomap_ros</name>
-  <version>0.4.2</version>
+  <version>0.4.3</version>
   <description>
     octomap_ros provides conversion functions between ROS and OctoMap's native types.
     This enables a convenvient use of the octomap package in ROS.
