@@ -12,9 +12,15 @@ endif()
 
 find_package(ament_cmake_auto REQUIRED)
 ament_auto_find_build_dependencies()
+find_package(OCTOMAP REQUIRED)
 
 ament_auto_add_library(${PROJECT_NAME} SHARED
   src/conversions.cpp
+)
+
+target_include_directories(${PROJECT_NAME}
+  PUBLIC
+    ${OCTOMAP_INCLUDE_DIRS}
 )
 
 if(BUILD_TESTING)
