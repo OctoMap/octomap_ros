@@ -106,13 +106,6 @@ namespace octomap {
   static inline octomap::pose6d poseTfToOctomap(const tf::Pose& poseTf){
     return octomap::pose6d(pointTfToOctomap(poseTf.getOrigin()), quaternionTfToOctomap(poseTf.getRotation()));
   }
-
-
-
-
-
 }
 
-
 #endif
-
