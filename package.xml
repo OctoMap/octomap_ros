@@ -16,7 +16,7 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
-  <depend>octomap</depend>
+  <depend>liboctomap-dev</depend>
   <depend>octomap_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>tf2</depend>
