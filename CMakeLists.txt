@@ -33,6 +33,7 @@ if(BUILD_TESTING)
   target_link_libraries(test_${PROJECT_NAME}
     gtest_main
     octomap
+    octomath
     octomap_ros
   )
 endif()
